@@ -1,0 +1,20 @@
+set.seed(20260813)
+dir.create("data", FALSE); dir.create("output", FALSE); dir.create("figures", FALSE); dir.create("docs", FALSE)
+n <- 500; id <- 1:n; trt <- rbinom(n,1,.5); base <- rnorm(n,60,10); ri <- rnorm(n,0,7)
+d <- expand.grid(id=id,week=c(0,4,8,12)); d <- d[order(d$id,d$week),]
+d$treatment <- factor(trt[d$id],0:1,c("Control","Treatment")); d$baseline <- base[d$id]
+d$outcome <- 60 + ri[d$id] - .28*d$week - .45*d$week*trt[d$id] + .25*(base[d$id]-60) + rnorm(nrow(d),0,5)
+d$missing <- with(d, week>0 & runif(nrow(d)) < plogis(-3+.025*(outcome-55)+.35*trt[id]))
+d$outcome_observed <- ifelse(d$missing,NA,d$outcome); write.csv(d,"data/longitudinal_trial.csv",row.names=FALSE)
+w12 <- subset(d,week==12); fit_cc <- lm(outcome_observed~treatment+baseline,data=w12)
+rep <- subset(d,week>0 & !is.na(outcome_observed)); rep$week_factor <- relevel(factor(rep$week),ref="12")
+fit_mm <- nlme::lme(outcome_observed~treatment*week_factor+baseline,random=~1|id,data=rep,na.action=na.omit)
+co <- summary(fit_mm)$tTable["treatmentTreatment",]
+res <- data.frame(method=c("Week-12 ANCOVA","Mixed model (week-12 contrast)"),estimate=c(coef(fit_cc)["treatmentTreatment"],co["Value"]),se=c(summary(fit_cc)$coef["treatmentTreatment","Std. Error"],co["Std.Error"]))
+res$lower <- res$estimate-1.96*res$se; res$upper <- res$estimate+1.96*res$se; write.csv(res,"output/model_results.csv",row.names=FALSE)
+means <- aggregate(outcome_observed~week+treatment,d,mean,na.rm=TRUE)
+p <- ggplot2::ggplot(means,ggplot2::aes(week,outcome_observed,color=treatment))+ggplot2::geom_line(linewidth=1)+ggplot2::geom_point(size=2)+ggplot2::labs(title="Outcome Trajectories",y="Mean observed outcome",color="Group")+ggplot2::theme_minimal(base_size=12)
+ggplot2::ggsave("figures/outcome-trajectories.png",p,width=7,height=4.5,dpi=160)
+stopifnot(nrow(d)==2000, all(c("estimate","lower","upper")%in%names(res)), res$estimate[2]<0)
+html <- sprintf('<!doctype html><meta charset="utf-8"><style>body{font:16px Arial;max-width:900px;margin:40px auto;color:#111;line-height:1.5}table{border-collapse:collapse}th,td{padding:8px;border:1px solid #aaa}img{max-width:100%%}</style><h1>Longitudinal Clinical Data Analysis</h1><p><b>Question:</b> How does treatment change outcomes over 12 weeks under incomplete follow-up?</p><h2>Methods</h2><p>A reproducible synthetic cohort of 500 participants was analyzed with week-12 baseline-adjusted ANCOVA and a subject-specific random-intercept mixed model. Missingness depends on observed outcome and treatment, representing a MAR sensitivity scenario.</p><h2>Results</h2><table><tr><th>Method</th><th>Estimate</th><th>95%% CI</th></tr>%s</table><img src="../figures/outcome-trajectories.png"><h2>Interpretation</h2><p>Negative estimates favor treatment. The mixed model uses all observed repeated measures and directly reports the treatment contrast at week 12.</p><h2>Reproducibility</h2><p>Run <code>Rscript run_all.R</code>. Simulated data, model output, figure, and validation checks are regenerated from a fixed seed.</p>',paste(sprintf('<tr><td>%s</td><td>%.2f</td><td>%.2f to %.2f</td></tr>',res$method,res$estimate,res$lower,res$upper),collapse=''))
+writeLines(html,"docs/index.html")

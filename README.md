@@ -7,9 +7,9 @@ Applied work samples covering study design, statistical analysis, validation, an
 | Priority | Project | Status | Core methods |
 |---|---|---|---|
 | 01 | [Clinical Trial Design & Power Simulation](01-clinical-trial-design-simulation/) | Complete | Analytical sample size, Monte Carlo power, ANCOVA, dropout sensitivity |
-| 02 | Longitudinal Clinical Data Analysis | Planned | ANCOVA, GEE, mixed models, missing data |
-| 03 | Survival & Competing Risks | Planned | Kaplan-Meier, Cox, diagnostics, Fine-Gray, RMST |
-| 04 | Causal Inference & Healthcare RWE | Planned | Propensity scores, IPTW, balance, treatment effects |
+| 02 | [Longitudinal Clinical Data Analysis](02-longitudinal-clinical-data-analysis/) | Complete | ANCOVA, mixed models, missing-data sensitivity |
+| 03 | [Survival & Competing Risks](03-survival-and-competing-risks/) | Complete | Kaplan-Meier, Cox, PH diagnostics, Fine-Gray |
+| 04 | [Causal Inference & Healthcare RWE](04-causal-inference-observational-health-data/) | Complete | Propensity scores, matching, IPTW, balance, ATE/ATT |
 | 05 | Reproducible Clinical Reporting | Planned | Automated tables, figures, listings, Quarto |
 | 06 | Clinical Trial ADaM Analysis | Planned | SDTM-to-ADaM workflow, TLFs, independent QC |
 
