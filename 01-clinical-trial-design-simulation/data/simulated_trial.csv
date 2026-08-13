@@ -1,0 +1,201 @@
+"participant_id","treatment","baseline_sbp","week12_sbp","completed_week12"
+1,"Treatment A",158.2,144.2,TRUE
+2,"Treatment A",132.6,128.4,TRUE
+3,"Placebo",136.6,127.7,TRUE
+4,"Placebo",123.3,141.5,TRUE
+5,"Treatment A",154.9,133.9,TRUE
+6,"Placebo",148.4,NA,FALSE
+7,"Placebo",116.5,NA,FALSE
+8,"Treatment A",162.2,168.2,TRUE
+9,"Placebo",122.5,136.2,TRUE
+10,"Treatment A",124.2,132.7,TRUE
+11,"Placebo",117.9,103.1,TRUE
+12,"Treatment A",122.1,119.7,TRUE
+13,"Placebo",134.8,150.8,TRUE
+14,"Treatment A",148,156.5,TRUE
+15,"Placebo",129.3,109.5,TRUE
+16,"Placebo",137,110.2,TRUE
+17,"Treatment A",135.8,116,TRUE
+18,"Placebo",157.6,134.1,TRUE
+19,"Placebo",174.3,169.4,TRUE
+20,"Placebo",124,135.8,TRUE
+21,"Placebo",168.6,178.5,TRUE
+22,"Placebo",172,161.5,TRUE
+23,"Placebo",143.5,NA,FALSE
+24,"Placebo",153.5,167.4,TRUE
+25,"Placebo",113.9,133.7,TRUE
+26,"Placebo",147,152.7,TRUE
+27,"Placebo",131.8,148,TRUE
+28,"Placebo",137.5,135.9,TRUE
+29,"Placebo",148.3,NA,FALSE
+30,"Treatment A",155.5,157.3,TRUE
+31,"Treatment A",139.3,111.2,TRUE
+32,"Placebo",179.6,163.9,TRUE
+33,"Treatment A",148.8,129.8,TRUE
+34,"Placebo",137,127.4,TRUE
+35,"Treatment A",146.6,129.7,TRUE
+36,"Placebo",138.5,143.4,TRUE
+37,"Placebo",123.6,130,TRUE
+38,"Placebo",147.5,131.1,TRUE
+39,"Treatment A",154.2,150.6,TRUE
+40,"Placebo",145.7,149.3,TRUE
+41,"Placebo",145.6,149,TRUE
+42,"Treatment A",142.4,140.8,TRUE
+43,"Placebo",152.7,162.2,TRUE
+44,"Placebo",120.7,120.4,TRUE
+45,"Placebo",157.4,143.2,TRUE
+46,"Placebo",126.4,140.6,TRUE
+47,"Treatment A",145,145.2,TRUE
+48,"Placebo",151.6,160.3,TRUE
+49,"Treatment A",143.6,137,TRUE
+50,"Placebo",116.6,133.2,TRUE
+51,"Treatment A",140.4,148.7,TRUE
+52,"Treatment A",145,129.5,TRUE
+53,"Treatment A",154.8,165.1,TRUE
+54,"Treatment A",147.5,130.7,TRUE
+55,"Treatment A",148.7,120.6,TRUE
+56,"Treatment A",157.1,143.8,TRUE
+57,"Treatment A",129.4,131.1,TRUE
+58,"Placebo",130.7,126.2,TRUE
+59,"Treatment A",139.9,NA,FALSE
+60,"Placebo",145.1,NA,FALSE
+61,"Placebo",161.1,166.1,TRUE
+62,"Treatment A",127,102,TRUE
+63,"Treatment A",126.9,102,TRUE
+64,"Placebo",151.6,131.5,TRUE
+65,"Placebo",134,NA,FALSE
+66,"Placebo",136.8,148.8,TRUE
+67,"Treatment A",149.1,130.3,TRUE
+68,"Placebo",130.8,135,TRUE
+69,"Treatment A",129.1,136,TRUE
+70,"Treatment A",136.1,138.5,TRUE
+71,"Treatment A",134.1,NA,FALSE
+72,"Placebo",129.7,136.2,TRUE
+73,"Treatment A",153.1,146.8,TRUE
+74,"Treatment A",132.8,NA,FALSE
+75,"Placebo",141,NA,FALSE
+76,"Treatment A",142.1,134,TRUE
+77,"Treatment A",112.1,124.2,TRUE
+78,"Treatment A",145.2,121.8,TRUE
+79,"Placebo",162.5,149.1,TRUE
+80,"Treatment A",139.8,143.9,TRUE
+81,"Placebo",128.4,134.8,TRUE
+82,"Treatment A",159.7,149.9,TRUE
+83,"Treatment A",143.9,121.7,TRUE
+84,"Treatment A",155.2,150,TRUE
+85,"Placebo",143.2,135.8,TRUE
+86,"Treatment A",149.2,120.6,TRUE
+87,"Treatment A",161.7,155.5,TRUE
+88,"Treatment A",149.9,141.1,TRUE
+89,"Placebo",145.6,134.6,TRUE
+90,"Placebo",129.9,137.2,TRUE
+91,"Treatment A",148.7,117.9,TRUE
+92,"Treatment A",133.8,156.2,TRUE
+93,"Treatment A",172.7,126.3,TRUE
+94,"Placebo",145.1,147,TRUE
+95,"Placebo",128,130.1,TRUE
+96,"Placebo",164.6,140.6,TRUE
+97,"Treatment A",133.1,134.8,TRUE
+98,"Placebo",116.2,120.8,TRUE
+99,"Treatment A",124.3,143.9,TRUE
+100,"Placebo",140.6,NA,FALSE
+101,"Placebo",133.5,152.2,TRUE
+102,"Treatment A",146.9,145.8,TRUE
+103,"Placebo",136.6,125.3,TRUE
+104,"Placebo",112.1,121,TRUE
+105,"Placebo",135.7,126.5,TRUE
+106,"Placebo",166.5,131.9,TRUE
+107,"Treatment A",133.4,153.9,TRUE
+108,"Treatment A",131.2,148.5,TRUE
+109,"Placebo",138.2,140.6,TRUE
+110,"Treatment A",164.8,132.8,TRUE
+111,"Placebo",126.9,NA,FALSE
+112,"Treatment A",151.7,130.2,TRUE
+113,"Placebo",130.8,141.6,TRUE
+114,"Placebo",135.1,NA,FALSE
+115,"Placebo",134.7,139.1,TRUE
+116,"Placebo",151.7,146.2,TRUE
+117,"Treatment A",149.1,153.4,TRUE
+118,"Placebo",156.1,162.5,TRUE
+119,"Placebo",156,NA,FALSE
+120,"Treatment A",172.4,153,TRUE
+121,"Placebo",141.1,151.9,TRUE
+122,"Placebo",102,119.6,TRUE
+123,"Treatment A",131.9,147.5,TRUE
+124,"Treatment A",128.4,112.6,TRUE
+125,"Placebo",135.6,136.3,TRUE
+126,"Placebo",157.3,163.6,TRUE
+127,"Placebo",131.5,126.6,TRUE
+128,"Placebo",127.9,112,TRUE
+129,"Placebo",147.4,151.2,TRUE
+130,"Placebo",150.5,139.2,TRUE
+131,"Placebo",136.4,131.9,TRUE
+132,"Treatment A",146.2,147.9,TRUE
+133,"Placebo",147.5,169.9,TRUE
+134,"Placebo",145.5,143.8,TRUE
+135,"Treatment A",131.4,141.2,TRUE
+136,"Placebo",151.1,121.2,TRUE
+137,"Placebo",106,120.7,TRUE
+138,"Treatment A",149.2,119.7,TRUE
+139,"Treatment A",146.1,118.2,TRUE
+140,"Placebo",170.8,175.4,TRUE
+141,"Treatment A",143.9,NA,FALSE
+142,"Placebo",141.7,147.9,TRUE
+143,"Treatment A",157.9,139.3,TRUE
+144,"Treatment A",151,126.2,TRUE
+145,"Treatment A",139.9,140.1,TRUE
+146,"Placebo",139.7,126.3,TRUE
+147,"Placebo",142.1,170.3,TRUE
+148,"Treatment A",123.9,126.3,TRUE
+149,"Treatment A",158.5,NA,FALSE
+150,"Placebo",131.9,116.2,TRUE
+151,"Placebo",135.6,143.6,TRUE
+152,"Placebo",150.3,159.8,TRUE
+153,"Treatment A",134,135.2,TRUE
+154,"Treatment A",138.4,134.7,TRUE
+155,"Treatment A",162.9,167.6,TRUE
+156,"Treatment A",130.5,137.9,TRUE
+157,"Placebo",136.6,145.6,TRUE
+158,"Treatment A",162.5,161.3,TRUE
+159,"Treatment A",134.9,136,TRUE
+160,"Placebo",131.7,172.7,TRUE
+161,"Placebo",143.9,146.5,TRUE
+162,"Treatment A",149.2,153.4,TRUE
+163,"Treatment A",130.2,140.1,TRUE
+164,"Placebo",137.9,NA,FALSE
+165,"Placebo",138.1,151.6,TRUE
+166,"Placebo",125.5,135.5,TRUE
+167,"Placebo",140.3,116.9,TRUE
+168,"Placebo",165.4,145.6,TRUE
+169,"Placebo",153.3,NA,FALSE
+170,"Placebo",129.1,156.5,TRUE
+171,"Treatment A",145.3,136.9,TRUE
+172,"Treatment A",136.3,102.6,TRUE
+173,"Placebo",137.5,129.4,TRUE
+174,"Treatment A",153.1,124.8,TRUE
+175,"Placebo",149.1,125.3,TRUE
+176,"Treatment A",153.9,154.7,TRUE
+177,"Treatment A",146.9,140.6,TRUE
+178,"Treatment A",128,145.1,TRUE
+179,"Treatment A",132.5,114.6,TRUE
+180,"Treatment A",121.8,112,TRUE
+181,"Placebo",149.3,153.3,TRUE
+182,"Placebo",160.4,166.1,TRUE
+183,"Treatment A",115.7,118.3,TRUE
+184,"Treatment A",141.2,124.1,TRUE
+185,"Placebo",147.7,166.9,TRUE
+186,"Placebo",136.7,158.2,TRUE
+187,"Treatment A",127.6,140.3,TRUE
+188,"Placebo",124.8,140.7,TRUE
+189,"Placebo",159.2,137.2,TRUE
+190,"Placebo",136.8,113.7,TRUE
+191,"Placebo",157.8,176.2,TRUE
+192,"Placebo",130.2,137.7,TRUE
+193,"Placebo",159.3,141.7,TRUE
+194,"Treatment A",148.1,158.1,TRUE
+195,"Placebo",140.4,132.9,TRUE
+196,"Placebo",157.5,145,TRUE
+197,"Placebo",134.5,142,TRUE
+198,"Treatment A",134.5,115,TRUE
+199,"Treatment A",139.9,128.9,TRUE
+200,"Placebo",138.5,126.4,TRUE

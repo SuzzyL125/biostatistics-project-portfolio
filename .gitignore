@@ -1,6 +1,12 @@
 .Rhistory
 .RData
 .DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+*.html.tmp
 .quarto
 *_cache/
 *_files/
+legacy/provider-fixed-effects/
