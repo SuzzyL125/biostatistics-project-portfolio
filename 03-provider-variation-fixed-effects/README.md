@@ -1,23 +1,49 @@
 # Project 03 — Provider Variation & Fixed-Effects Analysis
 
-## Question
+**Objective:** Quantify physician- and organization-associated variation in early palliative-care billing after patient case-mix adjustment.
 
-How much variation in early palliative-care billing among adults with cancer is associated with treating physicians and healthcare organizations after patient case-mix adjustment?
+**Methods:** Hierarchical data simulation, patient case-mix regression, physician and organization fixed effects, residual-variation comparison, and adjusted logistic regression.
 
-## Design
+**Tools:** R, fixed-effects regression, logistic regression, Git, HTML
 
-The simulation represents patients nested within physicians and organizations. Patient characteristics include age, sex, race and ethnicity, socioeconomic measures, cancer type, diagnosis year, comorbidity, and geography. Provider and organization characteristics are incorporated into the outcome-generating process.
+**Primary estimand:** Descriptive reduction in residual outcome variation after adding physician or organization fixed effects to the case-mix model.
 
-## Methods demonstrated
+**Deliverables:** [HTML report](docs/index.html) | [Variation metrics](output/variation_metrics.csv) | [Adjusted associations](output/adjusted_associations.csv) | [Source code](run_all.R)
 
-- Physician and organization fixed-effects linear probability models
-- Clustered standard errors
-- Case-mix adjustment
-- Residual-variance comparison as a descriptive variation measure
-- Logistic regression and average marginal effects
+![Provider variation](figures/provider-variation.png)
 
-## Source
+## Key findings
 
-`src/original_simulation.R` preserves the original simulation and modeling program. It is displayed as a standalone project because its health-services research question and multilevel structure are substantively different from the randomized CGM analysis.
+- The synthetic hierarchical cohort contained 6,000 patients, 200 physicians, and 40 organizations.
+- Early palliative-care billing prevalence was **12.5%**.
+- Adding physician fixed effects reduced residual variation by **10.0%**, compared with **3.1%** for organization fixed effects.
+- These descriptive differences demonstrate provider-level heterogeneity; they are not causal quality rankings.
 
-The data are entirely synthetic. Estimates are methodological demonstrations and must not be interpreted as real provider performance.
+## Study design
+
+- Patients nested within physicians and organizations
+- Binary endpoint: early palliative-care billing
+- Patient case-mix: age, sex, comorbidity, and cancer type
+- Provider features: integration and prior referral
+- Organization feature: specialist availability
+
+## Repository structure
+
+```text
+src/        preserved original simulation program
+data/       generated patient-provider analytical dataset
+output/     variation metrics and adjusted associations
+figures/    physician variation visualization
+docs/       browser-ready report
+run_all.R   validated end-to-end pipeline
+```
+
+## Reproduce
+
+```bash
+Rscript run_all.R
+```
+
+## Interpretation limits
+
+All records are synthetic. Fixed effects absorb provider-specific differences but do not identify causal provider performance, and residual-variance reductions are descriptive rather than formal ICC estimates.

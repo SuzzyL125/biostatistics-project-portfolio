@@ -1,4 +1,4 @@
-# Clinical Trial Design & Power Simulation
+# Project 01 — Clinical Trial Design & Power Simulation
 
 **Objective:** Evaluate sample-size requirements and operating characteristics for a hypothetical 12-week, two-arm randomized trial of Treatment A versus placebo for reducing systolic blood pressure.
 

@@ -1,0 +1,13 @@
+set.seed(2026)
+dir.create("data", FALSE); dir.create("outputs", FALSE); dir.create("figures", FALSE); dir.create("docs", FALSE)
+n <- 200
+d <- data.frame(id=1:n,treatment=factor(sample(c("CGM","Standard Care"),n,TRUE)),age=round(rnorm(n,60,8)),sex=factor(sample(c("Female","Male"),n,TRUE)),hba1c_bl=round(rnorm(n,8.5,1),1))
+d$hba1c_3m <- d$hba1c_bl-ifelse(d$treatment=="CGM",rnorm(n,.8,.4),rnorm(n,.4,.4))
+d$hba1c_6m <- d$hba1c_bl-ifelse(d$treatment=="CGM",rnorm(n,1.3,.5),rnorm(n,.7,.5))
+write.csv(d,"data/trial_data.csv",row.names=FALSE)
+base <- do.call(rbind,lapply(split(d,d$treatment),function(x)data.frame(group=unique(x$treatment),n=nrow(x),age_mean=mean(x$age),female_n=sum(x$sex=="Female"),hba1c_baseline_mean=mean(x$hba1c_bl))))
+write.csv(base,"outputs/baseline_characteristics.csv",row.names=FALSE)
+fit <- lm(hba1c_6m~treatment+hba1c_bl+age+sex,data=d); sm <- coef(summary(fit)); out <- data.frame(term=rownames(sm),estimate=sm[,1],std_error=sm[,2],statistic=sm[,3],p_value=sm[,4],row.names=NULL); write.csv(out,"outputs/primary_analysis_results.csv",row.names=FALSE)
+png("figures/hba1c_boxplot.png",900,600);boxplot(hba1c_6m~treatment,d,col=c("#0072B2","#BBBBBB"),ylab="Six-month HbA1c (%)",xlab="Randomized group",main="Six-Month HbA1c by Treatment Group");stripchart(hba1c_6m~treatment,d,vertical=TRUE,method="jitter",pch=16,col="#00000055",add=TRUE);dev.off()
+tr <- out[out$term=="treatmentStandard Care",]; stopifnot(nrow(d)==200,nrow(tr)==1,tr$estimate>0)
+html <- sprintf('<!doctype html><meta charset="utf-8"><style>body{font:16px Arial;max-width:900px;margin:40px auto;color:#111;line-height:1.5}img{max-width:100%%}</style><h1>CGM Randomized Trial Analysis</h1><p><b>Question:</b> Does CGM improve six-month HbA1c versus standard care?</p><h2>Methods</h2><p>Synthetic two-arm trial (N=200); ANCOVA adjusted for baseline HbA1c, age, and sex.</p><h2>Finding</h2><p>Adjusted Standard Care minus CGM difference: <b>%.2f</b> HbA1c points (SE %.2f; p=%.3g).</p><img src="../figures/hba1c_boxplot.png"><h2>Interpretation</h2><p>Positive values favor CGM. These synthetic results demonstrate workflow only.</p>',tr$estimate,tr$std_error,tr$p_value);writeLines(html,"docs/index.html")
