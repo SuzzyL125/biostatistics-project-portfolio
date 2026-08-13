@@ -53,6 +53,10 @@ The main simulation uses a fixed seed. Package versions and session information 
 
 The published results use 1,000 simulations per scenario for a practical portfolio runtime. A protocol-level design would normally increase the number of iterations after narrowing the scenario set.
 
+## Original backup
+
+The useful content from `clinical-trial-simulation-backup-20260813` is retained under [`legacy/`](legacy/). See the [migration record](legacy/MIGRATION.md) for the file-by-file mapping and documented exclusions.
+
 ## Interpretation limits
 
 This is a synthetic design exercise, not evidence about an actual treatment. Simulation-based power is conditional on the specified outcome distribution, treatment effect, dropout mechanism, and analysis model. Design decisions for a real trial require clinical input and protocol-specific assumptions.
