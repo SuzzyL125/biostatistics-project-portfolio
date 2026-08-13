@@ -1,28 +1,34 @@
-# Biostatistics Project Portfolio
+# Biostatistics & Healthcare Data Science Portfolio
 
-Applied work samples covering study design, statistical analysis, validation, and reproducible reporting for clinical and healthcare research.
+Applied projects in clinical-trial design, clinical data analysis, health-services research, survival analysis, and causal inference. Each numbered folder is a standalone work sample with code, data, outputs, and documentation.
 
-## Portfolio roadmap
+## Featured projects
 
-| Priority | Project | Status | Core methods |
-|---|---|---|---|
-| 01 | [Clinical Trial Design & Power Simulation](01-clinical-trial-design-simulation/) | Complete | Analytical sample size, Monte Carlo power, ANCOVA, dropout sensitivity |
-| 02 | [Longitudinal Clinical Data Analysis](02-longitudinal-clinical-data-analysis/) | Complete | ANCOVA, mixed models, missing-data sensitivity |
-| 03 | [Survival & Competing Risks](03-survival-and-competing-risks/) | Complete | Kaplan-Meier, Cox, PH diagnostics, Fine-Gray |
-| 04 | [Causal Inference & Healthcare RWE](04-causal-inference-observational-health-data/) | Complete | Propensity scores, matching, IPTW, balance, ATE/ATT |
-| 05 | Reproducible Clinical Reporting | Planned | Automated tables, figures, listings, Quarto |
-| 06 | Clinical Trial ADaM Analysis | Planned | SDTM-to-ADaM workflow, TLFs, independent QC |
+| No. | Project | Research question | Methods and deliverables |
+|---:|---|---|---|
+| 01 | [Clinical Trial Design & Power Simulation](01-clinical-trial-design-simulation/) | How many participants are required under different effects, variability, allocation ratios, and dropout assumptions? | Analytical sample size, Monte Carlo power, ANCOVA, sensitivity analysis, tested R functions, HTML report |
+| 02 | [CGM Randomized Trial Analysis](02-cgm-randomized-trial-analysis/) | Does continuous glucose monitoring improve six-month HbA1c compared with standard care? | Trial-data simulation, baseline table, adjusted ANCOVA, results table, clinical visualization |
+| 03 | [Provider Variation & Fixed-Effects Analysis](03-provider-variation-fixed-effects/) | How much variation in early palliative-care billing is associated with physicians and organizations? | Hierarchical healthcare data, physician and organization fixed effects, clustered inference, marginal effects |
+| 04 | [Longitudinal Clinical Data Analysis](04-longitudinal-clinical-data-analysis/) | How does treatment change outcomes over 12 weeks with incomplete follow-up? | Repeated-measures engineering, week-12 ANCOVA, random-intercept mixed model, MAR missingness |
+| 05 | [Survival & Competing-Risk Analysis](05-survival-and-competing-risks/) | Is treatment associated with time to disease event when another event can occur first? | Kaplan–Meier, adjusted Cox regression, PH diagnostics, Fine–Gray model |
+| 06 | [Causal Inference in Observational Health Data](06-causal-inference-observational-health-data/) | What is the treatment effect after addressing measured confounding? | Propensity scores, matching, stabilized IPTW, trimming, balance diagnostics, ATE and ATT |
 
-Projects are implemented sequentially so each repository section is a complete, reviewable work sample rather than an empty scaffold.
+## Portfolio strengths
 
-## Technical focus
+- Converts research questions into documented estimands and analysis workflows.
+- Performs data-quality checks and produces reviewable tables, figures, and reports.
+- Uses reproducible pipelines rather than manual one-off output generation.
+- Distinguishes randomized-trial, longitudinal, time-to-event, multilevel, and observational causal methods.
+- Communicates assumptions and interpretation limits alongside numerical results.
 
-R, SAS, Python, SQL, clinical-trial design, real-world evidence, longitudinal and survival methods, causal inference, validation, and reproducible reporting.
+## Technology
 
-## Data policy
+R, statistical simulation, regression modeling, mixed models, survival analysis, propensity-score methods, Git, GitHub, and browser-ready HTML reporting.
 
-All new portfolio projects use synthetic or clearly redistributable public data. Synthetic-data projects are explicitly labeled and are not presented as clinical evidence.
+## Data and interpretation policy
 
-## Legacy material
+All portfolio datasets are synthetic or explicitly redistributable. Results demonstrate analytical methods and are not clinical evidence. Each project documents the assumptions that limit interpretation.
 
-Earlier coursework and exploratory scripts are preserved under `legacy/` directories for provenance. The numbered project folders contain the recommended review-ready workflows.
+## Reproducing the work
+
+Enter a numbered project folder and follow its README. Reviewers can inspect the committed outputs without installing software; technical reviewers can rerun each pipeline from its source code.

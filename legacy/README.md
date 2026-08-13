@@ -1,10 +1,8 @@
-# Legacy project archive
+# Provenance archive
 
-The original `clinical-trial-simulation` work has been retained here for provenance while the numbered folders provide review-ready workflows.
+This directory is retained only to document source provenance. The substantive work is presented in the numbered portfolio:
 
-| Original material | Current location |
-|---|---|
-| CGM trial simulation scripts, source data, results, and figure | `01-clinical-trial-design-simulation/legacy/` |
-| Provider fixed-effects simulation | `provider-fixed-effects/provider_fixed_effects_simulation.R` |
+- [Project 02 — CGM Randomized Trial Analysis](../02-cgm-randomized-trial-analysis/)
+- [Project 03 — Provider Variation & Fixed-Effects Analysis](../03-provider-variation-fixed-effects/)
 
-The backup's `cmd_history.md` was excluded because inspection showed it to be an incomplete HTML/CSS fragment rather than analysis code or usable command history. The original backup directory remains unchanged.
+Recruiters and reviewers should use the numbered project folders rather than this archive.

@@ -1,0 +1,14 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Provider Variation and Fixed-Effects Analysis</title>
+<style>body{font:16px Arial;max-width:900px;margin:40px auto;color:#111;line-height:1.5}table{border-collapse:collapse}th,td{border:1px solid #aaa;padding:8px;text-align:left}</style>
+<h1>Provider Variation &amp; Fixed-Effects Analysis</h1>
+<p><strong>Research question:</strong> How much variation in early palliative-care billing is associated with physicians and healthcare organizations after patient case-mix adjustment?</p>
+<h2>Simulated data structure</h2>
+<table><tr><th>Level</th><th>Units</th><th>Selected variables</th></tr><tr><td>Patient</td><td>20,000</td><td>Age, sex, race/ethnicity, socioeconomic measures, cancer type, comorbidity</td></tr><tr><td>Physician</td><td>900</td><td>Age group, sex, integration status, prior referral</td></tr><tr><td>Organization</td><td>120</td><td>Size and palliative-medicine specialist availability</td></tr></table>
+<h2>Analytical approach</h2>
+<p>The program estimates separate physician and organization fixed-effects linear probability models with clustered standard errors, compares residual variation with a case-mix model, and fits logistic regression for adjusted associations and average marginal effects.</p>
+<h2>Interpretation</h2>
+<p>Fixed effects describe adjusted within-dataset provider variation; they do not by themselves identify causal provider effects or establish quality rankings. All data are synthetic.</p>
+<h2>Source</h2>
+<p>The complete original R program is available in <code>src/original_simulation.R</code>.</p>

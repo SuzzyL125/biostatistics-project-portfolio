@@ -1,0 +1,15 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>CGM Randomized Trial Analysis</title>
+<style>body{font:16px Arial;max-width:900px;margin:40px auto;color:#111;line-height:1.5}table{border-collapse:collapse}th,td{border:1px solid #aaa;padding:8px;text-align:left}img{max-width:760px;width:100%}</style>
+<h1>CGM Randomized Trial Analysis</h1>
+<p><strong>Research question:</strong> Does continuous glucose monitoring improve six-month HbA1c compared with standard care?</p>
+<h2>Design and methods</h2>
+<p>A synthetic two-arm randomized trial of 200 adults includes baseline, three-month, and six-month HbA1c. The primary ANCOVA adjusts the six-month outcome for baseline HbA1c, age, and sex.</p>
+<h2>Primary result</h2>
+<table><tr><th>Contrast</th><th>Adjusted difference</th><th>Standard error</th><th>p-value</th></tr><tr><td>Standard care − CGM</td><td>0.760</td><td>0.071</td><td>&lt;0.001</td></tr></table>
+<p>The positive contrast indicates higher six-month HbA1c under standard care in this simulated dataset. It demonstrates the workflow and is not clinical evidence.</p>
+<h2>Visualization</h2>
+<img src="../figures/hba1c_boxplot.png" alt="Six-month HbA1c by randomized treatment group">
+<h2>Reproducibility</h2>
+<p>The sequential programs in <code>analysis/</code> create the data, baseline summary, adjusted analysis, result export, and figure.</p>
